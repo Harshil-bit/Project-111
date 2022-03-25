@@ -6,7 +6,7 @@ import plotly.graph_objects as go
 import plotly.figure_factory as ff
 import random
 
-df=pd.read_csv('py/medium_data(1).csv')
+df=pd.read_csv('medium_data(1).csv')
 data=df["reading_time"].to_list()
 
 mean=statistics.mean(data)
@@ -51,7 +51,7 @@ second_std_deviation_start,second_std_deviation_end=mean-(2*std_deviation),mean+
 third_std_deviation_start,third_std_deviation_end=mean-(3*std_deviation),mean+(3*std_deviation)
 
 #Finding the mean of the fisrt data
-df=pd.read_csv('py/sample_2(P-111).csv')
+df=pd.read_csv('sample_2(P-111).csv')
 data=df["reading_time"].to_list()
 mean_of_sample1=statistics.mean(data)
 #std_deviation_of_sample1=statistics.stdev(data)
@@ -63,8 +63,8 @@ fig.add_trace(go.Scatter(x=[mean_of_sample1,mean_of_sample1],y=[0,0.17],mode="li
 fig.add_trace(go.Scatter(x=[first_std_deviation_end,first_std_deviation_end],y=[0,0.17],mode="lines",name="Std.deviation 1 end"))
 fig.show()
 
-#Finding the mean of the second data (Students who had extra classes)
-df=pd.read_csv('py/sample_2(P-111).csv')
+#Finding the mean of the second data 
+df=pd.read_csv('/sample_2(P-111).csv')
 data=df["reading_time"].to_list()
 mean_of_sample2=statistics.mean(data)
 #std_deviation_of_sample2=statistics.stdev(data)
@@ -77,8 +77,8 @@ fig.add_trace(go.Scatter(x=[first_std_deviation_end,first_std_deviation_end],y=[
 fig.add_trace(go.Scatter(x=[second_std_deviation_end,second_std_deviation_end],y=[0,0.17],mode="lines",name="Std.deviation 2 end"))
 fig.show()
 
-#Finding the mean of the third data (Students who were enforced with registers)
-df=pd.read_csv('py/sample_2(P-111).csv')
+#Finding the mean of the third data 
+df=pd.read_csv('sample_2(P-111).csv')
 data=df["reading_time"].to_list()
 mean_of_sample3=statistics.mean(data)
 #std_deviation_of_sample3=statistics.stdev(data)
